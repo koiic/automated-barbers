@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'autosaloon_main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'automatedsaloondb',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
+        'NAME': 'autosaloondb',
+        'USER': 'admin1',
+        'PASSWORD': 'admin1234',
         'HOST': 'localhost',
         'PORT': '',
     }
