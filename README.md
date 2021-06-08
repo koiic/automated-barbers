@@ -21,4 +21,11 @@ $ pip3 install -r requirements.txt
 > GRANT ALL PRIVILEGES ON DATABASE autosaloondb TO admin1;
 > ALTER USER admin1 CREATEDB;
 ```
+
+##### DjangoAdmin Login detail
+```
+Username: admin
+Email: admin@gmail.com
+Password: admin
+```
 ###### All set...
