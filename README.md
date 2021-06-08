@@ -9,6 +9,11 @@ $ source env/bin/activate
 > \env\Scripts\activate.bat
 ```
 
+##### Installing the necessary libraries
+```
+$ pip3 install -r requirements.txt
+```
+
 ##### Create Postgres Database to suite the project
 ```
 > CREATE DATABASE autosaloondb;
