@@ -4,7 +4,7 @@ from .models import Saloon
 from .serializers import SaloonSerializer
 from decouple import config
 
-class AddSaloon(viewsets.ModelViewSet):
+class Saloon(viewsets.ModelViewSet):
     # Create your views here.
     queryset = Saloon.objects.all()
     serializer_class = SaloonSerializer
