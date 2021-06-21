@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -78,10 +79,10 @@ WSGI_APPLICATION = 'autosaloon_main.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': os.getenv("NAME"),
-    'USER': os.getenv("USER"),
-    'PASSWORD': os.getenv("PASSWORD"),
-    'HOST': os.getenv("HOST"),
+    'NAME': config("pgNAME"),
+    'USER': config("pgUSER"),
+    'PASSWORD': config("pgPASSWORD"),
+    'HOST': config("pgHOST"),
     'PORT': '',
     }
 }
