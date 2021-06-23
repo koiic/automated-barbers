@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'autosaloon_api',
-    # 'auth',
+    'account',
     'rest_framework_simplejwt'
     
 
