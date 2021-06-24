@@ -1,18 +1,9 @@
-
-from django.core.files import File
-from urllib.request import urlretrieve
-import uuid
 from django.db import models
-from django.core.validators import RegexValidator
 from django.utils.translation import ugettext_lazy as _
-from django.contrib.auth.models import AbstractBaseUser, Permission
 from datetime import datetime, timedelta, timezone
-from django.contrib.auth.models import PermissionsMixin
-from django.conf import settings
-from django.urls import reverse
-from django.contrib.postgres.fields import ArrayField
+from django.contrib.auth.models import PermissionsMixin, AbstractBaseUser, Permission
 from account.manager import CustomUserManager
-from django.core.exceptions import ValidationError
+from autosaloon_api.models import Saloon
 
 USER_ROLE = (
     ('Customer', 'Customer'),
@@ -30,6 +21,7 @@ GENDER = (
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
 
+    saloon = models.ForeignKey(Saloon, on_delete=models.CASCADE)
     email = models.EmailField(
         _('email address'), null=True, blank=True, unique=True)
     firstname = models.CharField(max_length=255,)

@@ -7,6 +7,7 @@ defusedxml==0.7.1
 Django==3.2.4
 django-admin==2.0.1
 django-allauth==0.44.0
+django-cors-headers==3.7.0
 django-excel-base==1.0.4
 django-excel-response2==3.0.2
 django-rest-auth==0.9.5
