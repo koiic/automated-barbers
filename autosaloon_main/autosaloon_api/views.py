@@ -47,9 +47,8 @@ class SaloonEdit(
     mixins.DestroyModelMixin,
     ):  
 
-
-
-    permission_classes = (IsAdminUser,)
+    
+    permission_classes = (IsAdminUser,)# Only staff can update, delete or create new saloon: If user.is_staff = True
 
     serializer_class = SaloonSerializer
     queryset = Saloon.objects.all()

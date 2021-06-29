@@ -4,7 +4,7 @@ from rest_framework import generics, viewsets, mixins
 from rest_framework.response import Response
 from .models import  CustomUser
 from .serializers import CreateUserSerializer
-# from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.exceptions import AuthenticationFailed
 import jwt, datetime
 from decouple import config
