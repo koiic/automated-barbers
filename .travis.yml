@@ -14,7 +14,7 @@ before_install:
 before_script:
   - pip install -r requirements.txt
   - cd ./autosaloon_main/
-  - psql -c 'create database "autosaloondb";' -U admin1
+  - psql -c 'create database "autosaloondb";' -U postgres
 
 # Environment setting
 env: DJANGO_SETTINGS_MODULE="autosaloon_main.settings"
