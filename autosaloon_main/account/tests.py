@@ -26,7 +26,7 @@ class AddSaloon_TestCase(APITestCase):
         "firstname": "admin",
         "lastname": "user",
         "password": "admin12343",
-        "gebnder": 'Male',
+        "gender": 'Male',
         "phone": "09011223344",
         "roles": "Customer",
         "is_staff": 'false',
