@@ -1,32 +1,3 @@
-# language: python 
-
-
-# python: 
-# - "3.4"
-# - "3.5"
-# - "3.6"
-# - "3.7"
-# - "3.8"
-# - "3.9"
-
-# services: 
-# - postgresql
-
-# env: 
-# -DJANGO=3.2.4 DB=postgresql
-# - SECRET_KEY = 'django-insecure-$$4t=nyj)#^pk)ww=5@j$ov+c2flyqd0!u7fr^gqj84p@%d(9m'
-
-# install:
-#  - pip install -r requirements.txt
-
-#  before_script:
-#   - psql -c 'create database test;' -U admin1
-  
-# script:
-#   python manage.py test
-
-
-
 # Language
 language: python
 python:  
