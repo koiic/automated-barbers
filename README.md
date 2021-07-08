@@ -1,4 +1,5 @@
-### Automated Saloon
+### Automated Saloon 
+[![Build Status](https://travis-ci.com/koiic/automated-barbers.svg?branch=main)](https://travis-ci.com/koiic/automated-barbers)
 
 ##### Setting up Virtual Environment
 ```
