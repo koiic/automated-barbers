@@ -1,28 +1,27 @@
-language: python 
+# Language
+language: python
+python:  
+  - "3.8.3"
+
+# DataBase
+services:
+  - postgres
+
+before_install:
+  - chmod +x ./autosaloon_main/manage.py
+
+# Required Installations befor running main script
+before_script:
+  - pip install -r requirements.txt
+  - cd ./autosaloon_main/
+  - psql -c 'create database "autosaloondb";' -U postgres
+
+# Environment setting
+env: DJANGO_SETTINGS_MODULE="autosaloon_main.settings"
 
 
-python: 
-- "3.4"
-- "3.5"
-- "3.6"
-- "3.7"
-- "3.8"
-- "3.9"
-
-services: 
-- postgresql
-
-env: 
--DJANGO=3.2.4 DB=postgresql
-- SECRET_KEY = 'django-insecure-$$4t=nyj)#^pk)ww=5@j$ov+c2flyqd0!u7fr^gqj84p@%d(9m'
-
-install:
- - pip install -r requirements.txt
-
- before_script:
-  - psql -c 'create database test;' -U admin1
-  
+# Run main scripts
 script:
-  python manage.py test
-
-
+  - python manage.py makemigrations
+  - python manage.py migrate
+  - python manage.py test
