@@ -1,4 +1,5 @@
-### Automated Saloon
+### Automated Saloon 
+[![Build Status](https://travis-ci.com/AinaEmmanuel/automated-barbers.svg?branch=main)](https://travis-ci.com/AinaEmmanuel/automated-barbers)
 
 ##### Setting up Virtual Environment
 ```
